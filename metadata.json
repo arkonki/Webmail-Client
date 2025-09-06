@@ -1,0 +1,5 @@
+{
+  "name": "Modern Webmail Client",
+  "description": "A modern, single-page webmail client application with a clean and responsive design, built with React and Tailwind CSS. This is a frontend prototype demonstrating the user interface and experience.",
+  "requestFramePermissions": []
+}
