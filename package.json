@@ -1,23 +1,64 @@
 {
-  "name": "modern-webmail-client",
-  "private": true,
-  "version": "0.0.0",
+  "name": "fox-webmail-client",
+  "version": "1.0.0",
+  "description": "A modern webmail client UI with server",
   "type": "module",
+  "main": "index.cjs",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "serve": "vite-node server/index.ts",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node index.cjs"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "react",
+    "tailwind",
+    "typescript",
+    "webmail"
+  ],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "helmet": "^7.1.0",
+    "i18next": "^23.12.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
+    "imapflow": "^1.0.166",
+    "mailparser": "^3.7.1",
+    "nodemailer": "^6.9.14",
+    "pg": "^8.12.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "date-fns": "^4.1.0",
-    "dompurify": "^3.1.6",
-    "zustand": "^4.5.4"
+    "react-i18next": "^15.0.0",
+    "sanitize-html": "^2.13.0",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/mailparser": "^3.4.4",
+    "@types/nodemailer": "^6.4.15",
+    "@types/pg": "^8.11.6",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/sanitize-html": "^2.11.0",
+    "@types/ws": "^8.5.10",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vite-node": "^1.6.0"
   }
 }
